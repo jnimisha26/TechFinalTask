@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SOCIALS - Profile Page</title>
+    <link rel="icon" href="./assets/title-icon-transparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/navigationbar.css">
+    <link rel="stylesheet" href="/css/profilemain.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+
+    <!-- ---nav-bar----- -->
+    <nav>
+        <div class="nav-left">
+            <img class="nav-logo" src="./assets/socials-logo-nav-white.png">
+            <!-- <ul>
+        <li><img src="./assets/inbox.png"></li>
+                <li><img src="./assets/notification.png"></li>
+            </ul> -->
+        </div>
+
+        <div class="nav-right">
+
+            <div class="search-box">
+                <img src="./assets/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="user-icon online" onclick="settingsMenuToggle()">
+
+                <img src="./assets/profile-picture-2.jpg">
+            </div>
+        </div>
+        <!-- ---------settings-menu--------- -->
+        <div class="settings-menu">
+            <div class="settings-menu-inner">
+                <div class="s-user-icon">
+                    <img src="./assets/profile-picture-2.jpg">
+                    <div>
+                        <p>Robert Stark</p>
+                        <a href="./profilemain.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="settings-links">
+                    <img src="./assets/activity.png" class="settings-icon">
+                    <a href="#">Check Your Activity <img src="./assets/right-arrow.png" width="10px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="./assets/settings.png" class="settings-icon">
+                    <a href="./profileupdate.html">Update Your Profile <img src="./assets/right-arrow.png"
+                            width="10px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="./assets/logout.png" class="settings-icon">
+                    <a href="#">Logout <img src="./assets/right-arrow.png" width="10px"></a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </nav>
+
+
+    <!-- ----profile----- -->
+    <div class="profile">
+        <!-- -----profile-card------ -->
+
+        <div class="profile-card">
+            <img class="cover-image" src="./assets/cover-fixed.jpg">
+
+            <div class="profile-picture-main">
+                <img src="<%= user.profile %>" alt="user profile">
+            </div>
+            <div>
+                <p class="profile-name"><%= user.name %></p>
+            </div>
+
+            <!-- <div ><img  class="edit-icon" src="./assets/edit-icon-white.png">
+                    </div> -->
+        </div>
+
+
+        <div class="profile-info">
+            <div class="profile-icon">
+                <ul class="profile-icon-1">
+                    <li><img src="./assets/profile-location.png"><%= user.location %></li>
+                    <li><img src="./assets/profile-job.png"><%= user.occupation %></li>
+                </ul>
+                <ul class="profile-icon-2">
+                    <li> <button type="button"><img src="./assets/add-friends-grey.png">ADD FRIEND</button></li>
+                    <li><button type="button"><img src="./assets/message(1)-grey.png"><span
+                                class="profile-button-message">MESSAGE</span></button>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="friend-list-title">Friend List </h3>
+
+
+            <img class="friend-list" src="./assets/friend1.png">
+            <img class="friend-list" src="./assets/friend2.png">
+            <img class="friend-list" src="./assets/friend3.png">
+            <img class="friend-list" src="./assets/friend4.png">
+
+
+        </div>
+
+
+
+        <!-- ----profile-update----- -->
+
+        <div class="profile-update">
+           
+            <form action="/myprofile" method="post">
+                <div class="profile-update-upper">
+                    <!-- <img class="profile-update-icon" src="user.profile"> -->
+                    <p><%= user.name %></p>
+                    <input type="text" name="caption" placeholder="What's on your mind?">
+                </div>
+
+                <div class="profile-update-lower">
+
+                   <input type="file" name="filename" value="true" >
+                    <button><input type="submit" value="Post"></button>
+
+                </div>
+            </form>
+        </div>
+
+
+
+
+        <!-- ----profile-posts------- -->
+        <div class="profile-posts">
+            <div class="post-info-upper">
+                <div class="post-image">
+                    <div class="post-image-inner">
+                        <img class="profile-post-icon" src="./assets/profile-picture-2.jpg">
+                    </div>
+                    <div class="post-author">
+                       AUthor
+                    </div>
+                </div>
+                <!-- <div class="dots">
+                            <img src="./assets/dots.png "  onclick="dotsMenuToggle()" >
+                        </div> -->
+            </div>
+
+            <div class="post-info-lower">
+                <div class="post-description">
+                    Mountains.
+                </div>
+                <div class="post-description-image">
+                    <img src="./assets/post-image2.jpg">
+                </div>
+            </div>
+
+            <div class="post-action">
+                <p><Button type="button"><img class="post-action-icon" src="./assets/heart.png"></Button></p>
+                <p><Button type="button"><img class="post-action-icon" src="./assets/chat-bubble.png"></Button></p>
+                <p><Button type="button"><img class="post-action-icon" src="./assets/send.png"></Button></p>
+                <p><Button type="button"><img class="post-action-icon " src="./assets/update-posts.png"
+                            id="update-1"></Button></p>
+                <p><Button type="button"><img class="post-action-icon" src="./assets/delete-hollow.png"></Button></p>
+            </div>
+
+            <div class="overlay" id="overlayed-1">
+                <div class="post">
+                    <!-- photo -->
+                    <div class="postphoto">
+                        <div class="editdiv">
+                            <p class="caption">Mountains
+                            </p>
+                            <div class="pencil" id="edit-1">
+                                <img src="./assets/pen.svg" alt="" class="eicon">
+                            </div>
+                        </div>
+
+                        <form action="" id="show-1">
+                            <div class="hideedit">
+                                <textarea name="" id="" cols="30" rows="1" placeholder="Edited Comment"></textarea>
+                                <input type="submit" class="success" value="Edit">
+                            </div>
+                        </form>
+
+                        <img src="./assets/post-image2.jpg" class="postit" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <!-- ---hover-menu---- -->
+            <!-- <div class="dots-menu">
+                        <div class="dots-menu-inner">
+
+                            <div class="dots-links">
+                        <img src="./assets/update-posts.png" class="dots-icon">
+                        <a href="#">Edit</a>
+                            </div>
+
+                            <div class="dots-links">
+                        <img src="./assets/delete.png" class="dots-icon">
+                        <a href="#">Delete</a>
+                            </div>
+                       </div>
+
+
+                    </div> -->
+
+
+        </div>
+
+        <div class="profile-posts">
+
+
+            <div class="post-info-upper">
+                <div class="post-image">
+                    <div class="post-image-inner">
+                        <img class="profile-post-icon" src="./assets/profile-picture-2.jpg">
+                    </div>
+                    <div class="post-author">
+                        Robert Stark
+                    </div>
+                </div>
+                <!-- <div class="dots">
+                            <img src="./assets/dots.png"  onclick="dotsMenuToggle()">
+                        </div> -->
+            </div>
+
+            <div class="post-info-lower">
+                <div class="post-description">
+                    Coffee.
+                </div>
+                <div class="post-description-image">
+                    <img src="./assets/coffee-cropped.png">
+                </div>
+            </div>
+
+            <div class="post-action">
+                <p><Button type="button"><img class="post-action-icon" src="./assets/heart.png"></Button></p>
+                <p><Button type="button"><img class="post-action-icon" src="./assets/chat-bubble.png"></Button></p>
+                <p><Button type="button"><img class="post-action-icon" src="./assets/send.png"></Button></p>
+                <p><Button type="button"><img class="post-action-icon" src="./assets/update-posts.png"
+                            id="update-2"></Button></p>
+                <p><Button type="button"><img class="post-action-icon" src="./assets/delete-hollow.png"></Button></p>
+            </div>
+            <div id="overlayed-2">
+                <div class="post">
+                    <!-- photo -->
+                    <div class="postphoto">
+                        <div class="editdiv">
+                            <p class="caption">Coffee
+                            </p>
+                            <div class="pencil" id="edit-2">
+                                <img src="./assets/pen.svg" alt="" class="eicon">
+                            </div>
+                        </div>
+
+                        <form action="" id="show-2">
+                            <div class="hideedit">
+                                <textarea name="" id="" cols="30" rows="1" placeholder="Edited Comment"></textarea>
+                                <input type="submit" class="success" value="Edit">
+                            </div>
+                        </form>
+
+                        <img src="./assets/coffee-cropped.png" class="postit" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---hover-menu--- -->
+            <!-- <div class="dots-menu">
+                        <div class="dots-menu-inner">
+                       
+                           <div class="dots-links">
+                           <img src="./assets/update-posts.png" class="dots-icon">
+                           <a href="#">Edit</a>
+                           </div>
+       
+                           <div class="dots-links">
+                           <img src="./assets/delete.png" class="dots-icon">
+                           <a href="#">Delete</a>
+                           </div>
+                       </div>
+
+
+                    </div> -->
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <!-- -----footer----- -->
+    <footer>
+        <hr class="footerdivider">
+        <div class="foot-links">
+            <a href="#" class="footext"> SERVICES</a>
+            <a href="#" class="footext">PRIVACY POLICY</a>
+            <a href="#" class="footext">TERMS</a>
+            <a href="#" class="footext">HELP</a>
+            <a href="#" class="footext">CONTACT US</a>
+        </div>
+        <div class="copy">
+            <p class="copyright">
+                SOCIALS &copy; 2023 .
+            </p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="settingsscript.js"></script>
+
+    <!-- <script>
+        
+        var img1 = document.createElement("img");
+        img1.src = "./assets/profile-picture-2.jpg";
+        document.querySelector("profileimage").appendChild(img1);
+
+       
+    </script> -->
+
+</body>
+
+</html>

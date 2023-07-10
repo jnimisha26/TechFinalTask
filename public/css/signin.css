@@ -1,0 +1,292 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    /* overflow: hidden; */ 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/*main*/
+.signin{
+    display: flex;
+    flex-direction: column;
+   background-color: rgb(199, 143, 199);
+}
+
+/*heading*/
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading1{
+    width: 80vw;
+    margin: 20px;
+    margin-bottom: 35px;
+}
+.heading2{
+    display: none;
+}
+
+/*form*/
+
+.back{
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+.form{
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    margin-top: 30px ;
+    margin-bottom: 30px;
+    /* height: 63vh; */
+}
+
+#register{
+    display: none;
+    padding-right: 20px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80vw;
+    background-color: rgb(252, 250, 250);
+}
+#pass{
+    margin-left: 0px;
+}
+.eye{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -37px;
+    left: 91%;
+    overflow-y: hidden;
+}
+.btn{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    /* background-color: rgb(243, 232, 243); */
+    background-color: rgb(210, 203, 203);
+    font-weight: bold;
+    border: none;
+    border-color: rgb(210, 203, 203) ;
+    overflow-y: hidden;
+}
+.btn:hover{
+    background-color: rgb(252, 244, 252);
+}
+.btndiv{
+    overflow-y: hidden;
+}
+
+.forgotten{
+    margin: 5px;
+    text-decoration: none;
+}
+.alternative{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.divide{
+    height: 2px;
+    width: 60vw;
+    margin : 20px 0px;
+}
+.dont{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.welcome{
+margin-bottom: 10px;
+font-size: 25px;
+}
+
+.password{
+    width: 80vw;
+}
+input{
+    background: none;
+    border: 0px;
+  }
+input.log {
+    width: 62px;
+    background-color:  rgb(210, 203, 203);
+    border: none;
+    font-weight: bold;
+}
+.log:hover{
+    background-color: rgb(252, 244, 252);
+}
+
+/*footer*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.footlinks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footext{
+    text-decoration: none;
+    color: grey;
+    margin: 15px;
+    line-height: 25px;
+    font-size: 13px;
+}
+.copyright{
+    margin: 10px;
+    font-size: 12px;
+}
+.footerdivider{
+    margin-bottom: 10px;
+}
+
+/*481px*/
+ 
+@media (min-width: 481px){
+    
+    .heading1{
+        display: none;
+    }
+    .heading2{
+        display: block;
+        height: 30vh;
+        width: 70vw;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    .box{
+        width: 60vw;
+    }
+    .password{
+        width: 60vw;
+    }
+
+    .footext{
+        margin: 30px;
+    }
+}
+
+/*680px*/
+
+@media (min-width : 680px){
+    
+    .form{
+        height: 57vh; /*signin*/
+    }
+    .heading2{
+        height: 35vh;
+        width: 64vw;
+    }
+}
+
+/*769*/
+
+@media (min-width : 769px){
+    
+        /* overflow-y: hidden;  signin*/
+    
+    .signin{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        align-items: center;
+        height: 86vh; /*signin*/
+    }
+
+    .heading2{
+        width: 47vw;
+        margin-top: 0px;
+        height: 44vh;
+        max-height: max-content;
+    }
+    .form .box { 
+        width: 35vw;
+    }
+    .form{
+        margin-bottom: 0px;
+    }
+    .password{
+        width: 35vw;
+    }
+    
+    .divide{
+        width: 30vw;   
+    }
+    .divider{
+        width: 30vw; 
+        margin: 0px;
+    }
+    
+}
+/*1025*/
+
+@media (min-width: 1025px){
+    .signin{
+        padding-left: 50px ;
+        padding-right: 50px;
+        overflow-y: hidden;
+    }
+    .heading2 {
+        width: 40vw;
+        height: 50vh;
+    }
+    .form .box{
+        width: 30vw; 
+    }
+    .password{
+        width: 30vw;
+    }
+   
+    #register{
+        padding-right: 0px;
+    }
+    .form{
+        margin-right: 50px;
+    }
+    .divider{
+        margin: 5px;
+    }
+}
+/*1245*/
+
+@media (min-width : 1245px){
+    
+       *{
+        overflow: hidden;
+       }
+       .heading2 {
+        width: 35vw;
+        height: 47vh;
+    }    
+    .back{
+        margin-bottom: 20px;
+    }
+    .form {
+        height: 54vh;
+    }
+
+}

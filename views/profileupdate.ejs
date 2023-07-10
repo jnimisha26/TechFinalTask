@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SOCIALS - Update Profile</title>
+    <link rel="icon" href="./assets/title-icon-transparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/navigationbar.css">
+    <link rel="stylesheet" href="/css/profileupdate.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <img class="nav-logo" src="./assets/socials-logo-nav-white.png">
+            <!-- <ul>
+        <li><img src="./assets/inbox.png"></li>
+                <li><img src="./assets/notification.png"></li>
+            </ul> -->
+        </div>
+
+        <div class="nav-right">
+
+            <div class="search-box">
+                <img src="./assets/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="user-icon online" onclick="settingsMenuToggle()">
+                <img src="./assets/profile-picture-2.jpg">
+            </div>
+        </div>
+        <!-- ---------settings-menu--------- -->
+        <div class="settings-menu">
+            <div class="settings-menu-inner">
+                <div class="s-user-icon">
+                    <img src="./assets/profile-picture-2.jpg">
+                    <div>
+                        <p>Robert Stark</p>
+                        <a href="./profilemain.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="settings-links">
+                    <img src="./assets/activity.png" class="settings-icon">
+                    <a href="#">Check Your Activity <img src="./assets/right-arrow.png" width="10px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="./assets/settings.png" class="settings-icon">
+                    <a href="./profileupdate.html">Update Your Profile <img src="./assets/right-arrow.png"
+                            width="10px"></a>
+                </div>
+
+                <div class="settings-links">
+                    <img src="./assets/logout.png" class="settings-icon">
+                    <a href="#">Logout <img src="./assets/right-arrow.png" width="10px"></a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ----profile-update----- -->
+
+    <form action="/updateprofile" method="put">
+        <div class="profile-update">
+            <div class="profile-picture-update">
+                <img src="<%= user.profile  %>">
+            </div>
+            <div class="change-picture-link">
+                <input type="file" name="filename" value="Change picture">
+            </div>
+
+            <div class="profile-info-update">
+                <ul>
+                    <li>
+                        <label for="username">Username</label>
+                        <input type="text" placeholder="<%= user.username%>" name="username" id="username">
+                    </li>
+                    <li>
+                        <label for="emailid">Email ID</label>
+                        <input type="email" placeholder="<%=user.email%>" name="email" id="emailid">
+                    </li>
+                    <li>
+                        <label for="mobilenumber">Mobile Number</label>
+                        <input type="Number" placeholder="<%=user.contact%>" id="mobilenumber" name="contact" />
+                    </li>
+                    <!-- <li>
+                    <label for="pass">Password</label>
+                    <input type="password" placeholder="Password" minlength="8" name="password" id="pass">
+                </li> -->
+                    <li>
+
+                        <input type="text" placeholder="<%=user.location%>" name="location">
+                    </li>
+                    <li>
+
+                        <input type="text" placeholder="<%=user.occupation%>" name="occupation">
+                    </li>
+                </ul>
+            </div>
+            <div class="profile-update-button">
+                <button type="button"><input type="submit" value="Update"></button>
+            </div>
+    </form>
+
+    </div>
+
+
+
+    <!-- -----footer----- -->
+    <footer>
+        <hr class="footerdivider">
+        <div class="foot-links">
+            <a href="#" class="footext"> SERVICES</a>
+            <a href="#" class="footext">PRIVACY POLICY</a>
+            <a href="#" class="footext">TERMS</a>
+            <a href="#" class="footext">HELP</a>
+            <a href="#" class="footext">CONTACT US</a>
+        </div>
+        <div class="copy">
+            <p class="copyright">
+                SOCIALS &copy; 2023 .
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="settingsscript.js"></script>
+</body>
+
+</html>

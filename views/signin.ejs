@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SOCIALS - Sign In </title>
+    <link rel = "icon" href = "Images/s.jpg"
+        type = "image/x-icon">
+        <!--css-->
+        <link rel="stylesheet" href="/css/signin.css">
+      <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">  
+    </head>
+
+<body>
+    <div class="signin">
+        <div class="title">
+            <img src="/Assets/logo.jpg" alt="" class="heading1">
+            <img src="/Assets/logo-big.jpg" alt="" class="heading2">
+        </div>
+        <!--SignIn-->
+        <div class="form" id="sign">
+            <p class="back">WELCOME BACK!</p>
+            <form action="/signin" method="post" class="input">
+                <input type="text" name="email"  placeholder="Email address " class="box">
+                <div class="password">
+                    <input type="password" name="password" placeholder="Password" class="box" id="pass">
+                    <img src="/Assets/eye.jpg" alt="" class="eye" id="eye-icon">
+                </div>
+                
+            
+            <div class="btndiv">
+                <button class="login btn">
+                   <input type="submit" value="Log In" class="log">
+                </button>
+            </div>
+        </form>
+            <hr class="divide" >
+            <div class="alternative">
+                <p class="dont">Dont have an account?
+                </p>
+                <button class=" btn " id="SUp">
+                    <a href="/">Sign Up</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr class="footerdivider">
+        <div class="foot-links">
+            <a href="#" class="footext"> SERVICES</a>
+            <a href="#" class="footext">PRIVACY POLICY</a>
+            <a href="#" class="footext">TERMS</a>
+            <a href="#" class="footext">HELP</a>
+            <a href="#" class="footext">CONTACT US</a>
+        </div>
+        <div class="copy">
+            <p class="copyright">
+                SOCIALS &copy; 2023 .
+            </p>
+        </div>
+    </footer>
+    
+    <!--js-->
+    <script src="javascript/signin.js"></script>
+</body>
+</html>
